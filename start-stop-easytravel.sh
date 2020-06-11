@@ -17,13 +17,12 @@
 
 case "$1" in
 	start)
-		echo "Starting EasyTravel..."
     		cd /home/dynatracelab_easytraveld
    		docker-compose down
 		docker-compose up -d
 		;;
 	stop)
-		echo "Stopping EasyTravel..."
+    		cd /home/dynatracelab_easytraveld
 		docker-compose down
 		;;
 	*)
