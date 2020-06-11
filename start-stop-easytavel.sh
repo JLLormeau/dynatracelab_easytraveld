@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source /etc/sysconfig/rc
-source $rc_functions
 case "$1" in
 	start)
 		echo "Starting EasyTravel..."
