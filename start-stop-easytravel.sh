@@ -34,8 +34,21 @@ case "$1" in
     		cd /home/dynatracelab_easytraveld
 		docker-compose ps
 		;;
+	startloadgen)
+    		cd /home/dynatracelab_easytraveld
+		docker-compose start loadgen 
+		;;
+	stoploadgen)
+    		cd /home/dynatracelab_easytraveld
+		docker-compose stop loadgen
+		;;
+	restartmongo)
+    		cd /home/dynatracelab_easytraveld
+		docker-compose stop loadgen mongodb
+		docker-compose start mongodb loadgen 
+		;;	
 	*)
-		echo "Usage: $0 {start|stop|restart|status}"
+		echo "Usage: $0 {start|stop|restart|startloadgen|stoploadgen|restartmongo|status}"
 		exit 1
 		;;
 esac
