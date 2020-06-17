@@ -30,8 +30,12 @@ case "$1" in
 		docker-compose down
 		docker-compose up -d
 		;;
+	status)
+    		cd /home/dynatracelab_easytraveld
+		docker-compose ps
+		;;
 	*)
-		echo "Usage: $0 {start|stop|restart}"
+		echo "Usage: $0 {start|stop|restart|status}"
 		exit 1
 		;;
 esac
