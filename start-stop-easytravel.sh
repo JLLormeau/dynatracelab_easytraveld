@@ -18,34 +18,34 @@
 case "$1" in
 	start)
     		cd /home/dynatracelab_easytraveld
-   		docker-compose down
-		docker-compose up -d
+   		/usr/local/bin/docker-compose down
+		/usr/local/bin/docker-compose up -d
 		;;
 	stop)
     		cd /home/dynatracelab_easytraveld
-		docker-compose down
+		/usr/local/bin/docker-compose down
 		;;
 	restart)
     		cd /home/dynatracelab_easytraveld
-		docker-compose down
-		docker-compose up -d
+		/usr/local/bin/docker-compose down
+		/usr/local/bin/docker-compose up -d
 		;;
 	status)
     		cd /home/dynatracelab_easytraveld
-		docker-compose ps
+		/usr/local/bin/docker-compose ps
 		;;
 	startloadgen)
     		cd /home/dynatracelab_easytraveld
-		docker-compose start loadgen 
+		/usr/local/bin/docker-compose start loadgen 
 		;;
 	stoploadgen)
     		cd /home/dynatracelab_easytraveld
-		docker-compose stop loadgen
+		/usr/local/bin/docker-compose stop loadgen
 		;;
 	restartmongo)
     		cd /home/dynatracelab_easytraveld
-		docker-compose stop loadgen mongodb
-		docker-compose start mongodb loadgen 
+		/usr/local/bin/docker-compose stop loadgen mongodb
+		/usr/local/bin/docker-compose start mongodb loadgen 
 		;;	
 	*)
 		echo "Usage: $0 {start|stop|restart|startloadgen|stoploadgen|restartmongo|status}"
