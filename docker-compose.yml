@@ -28,6 +28,9 @@ frontend:
   environment:
     CATALINA_OPTS: "-Dconfig.apmServerDefault=APM -Xmx525m"
     ET_BACKEND_URL: "http://easytravel-backend:8080"
+    ET_MONGO_AUTH_DB: "admin"
+    ET_DATABASE_USER: "etAdmin"
+    ET_DATABASE_PASSWORD: "adminadmin"
 www:
   hostname: easytravel-www
   container_name: www
