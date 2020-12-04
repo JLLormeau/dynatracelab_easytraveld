@@ -45,7 +45,7 @@ www:
     ET_BACKEND_LOCATION: "easytravel-backend:8080"
 loadgen:
   container_name: loadgen
-  image: "dynatrace/easytravel-loadgen"
+  image: "dynatrace/easytravel-loadgen:2.0.0.3186"
   links:
   - backend
   - frontend
