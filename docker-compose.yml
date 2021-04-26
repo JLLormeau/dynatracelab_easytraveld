@@ -10,7 +10,7 @@ backend:
   container_name: backend
   image: "dynatrace/easytravel-backend"
   ports:
-  - 8080
+  - 8080:8080
   links:
   - mongodb
   environment:
