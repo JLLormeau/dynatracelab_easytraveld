@@ -3,8 +3,8 @@ mongodb:
   container_name: mongodb
   image: "dynatrace/easytravel-mongodb"
   ports:
-  - 27017
-  - 28017
+  - 27017:27017
+  - 28017:28017
 
 backend:
   hostname: easytravel-backend
