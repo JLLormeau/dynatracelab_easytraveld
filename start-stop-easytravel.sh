@@ -47,6 +47,10 @@ case "$1" in
 		/usr/local/bin/docker-compose stop loadgen mongodb
 		/usr/local/bin/docker-compose start mongodb loadgen 
 		;;	
+	stopmongo)
+    		cd /home/dynatracelab_easytraveld
+		/usr/local/bin/docker-compose stop mongodb
+		;;
 	*)
 		echo "Usage: $0 {start|stop|restart|startloadgen|stoploadgen|restartmongo|status}"
 		exit 1
