@@ -52,7 +52,7 @@ case "$1" in
 		/usr/local/bin/docker-compose stop mongodb
 		;;
 	*)
-		echo "Usage: $0 {start|stop|restart|startloadgen|stoploadgen|restartmongo|status}"
+		echo "Usage: $0 {start|stop|restart|startloadgen|stoploadgen|restartmongo|stopmongo|status}"
 		exit 1
 		;;
 esac
