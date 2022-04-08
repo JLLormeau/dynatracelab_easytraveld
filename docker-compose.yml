@@ -75,7 +75,7 @@ loadgen:
     ET_FRONTEND_URL: "http://easytravel-www:80"
     ET_BACKEND_URL: "http://easytravel-www:8080"
     #ET_PROBLEMS: "BadCacheSynchronization,CPULoad,DatabaseCleanup,DatabaseSlowdown,FetchSizeTooSmall,JourneySearchError404,JourneySearchError500,LoginProblems,MobileErrors,TravellersOptionBox"
-    ET_PROBLEMS: "BadCacheSynchronization,JourneySearchError404,JourneySearchError500,LoginProblems,SlowAuthentication,SlowImages,SlowUserLogin,CPULoad,WorldMapDNSFailsAsia,DatabaseSlowdown,NetworkPacketDrop,FetchSizeTooSmall,InfiniteLoopInFrontend,DeadlockInFrontend,MediumMemoryLeak"
+    ET_PROBLEMS: "BadCacheSynchronization,JourneySearchError404,JourneySearchError500,LoginProblems,SlowAuthentication,SlowImages,SlowUserLogin,CPULoad,WorldMapDNSFailsAsia,DatabaseSlowdown,NetworkPacketDrop,FetchSizeTooSmall,InfiniteLoopInFrontend,DeadlockInFrontend,SmallMemoryLeak"
     ET_PROBLEMS_DELAY: 0
     ET_VISIT_NUMBER: 10
 
