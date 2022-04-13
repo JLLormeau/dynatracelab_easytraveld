@@ -51,10 +51,10 @@ case "$1" in
     		cd /home/dynatracelab_easytraveld
 		/usr/local/bin/docker-compose stop mongodb
 		;;
-        slow)
+        issue)
                 cd /home/dynatracelab_easytraveld
                 /usr/local/bin/docker-compose down
-                /usr/local/bin/docker-compose -f docker-compose-slow.yml up -d
+                /usr/local/bin/docker-compose -f docker-compose-issue.yml up -d
                 ;;
 	*)
 		echo "Usage: $0 {start|stop|restart|startloadgen|stoploadgen|restartmongo|stopmongo|status}"
