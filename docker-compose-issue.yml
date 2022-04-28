@@ -76,7 +76,7 @@ loadgen:
     ET_BACKEND_URL: "http://easytravel-www:8080"
     #ET_PROBLEMS: "BadCacheSynchronization,CPULoad,DatabaseCleanup,DatabaseSlowdown,FetchSizeTooSmall,JourneySearchError404,JourneySearchError500,LoginProblems,MobileErrors,TravellersOptionBox"
     ET_PROBLEMS: "MediumMemoryLeak"
-    ET_PROBLEMS_DELAY: 10
+    ET_PROBLEMS_DELAY: 0
     ET_VISIT_NUMBER: 10
 
 headless-loadgen:
