@@ -15,7 +15,8 @@
 #
 ### END INIT INFO
 
-export DOKER_DIR=/usr/local/bin
+#export DOKER_DIR=/usr/local/bin
+export DOKER_DIR=/usr/bin
 
 case "$1" in
 	start)
