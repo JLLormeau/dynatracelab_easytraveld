@@ -15,46 +15,48 @@
 #
 ### END INIT INFO
 
+export DOKER_DIR=/usr/local/bin
+
 case "$1" in
 	start)
     		cd /home/dynatracelab_easytraveld
-   		/usr/local/bin/docker-compose down
-		/usr/local/bin/docker-compose up -d
+   		$DOKER_DIR/docker-compose down
+		$DOKER_DIR/docker-compose up -d
 		;;
 	stop)
     		cd /home/dynatracelab_easytraveld
-		/usr/local/bin/docker-compose down
+		$DOKER_DIR/docker-compose down
 		;;
 	restart)
     		cd /home/dynatracelab_easytraveld
-		/usr/local/bin/docker-compose down
-		/usr/local/bin/docker-compose up -d
+		$DOKER_DIR/docker-compose down
+		$DOKER_DIR/docker-compose up -d
 		;;
 	status)
     		cd /home/dynatracelab_easytraveld
-		/usr/local/bin/docker-compose ps
+		$DOKER_DIR/docker-compose ps
 		;;
 	startloadgen)
     		cd /home/dynatracelab_easytraveld
-		/usr/local/bin/docker-compose start loadgen 
+		$DOKER_DIR/docker-compose start loadgen 
 		;;
 	stoploadgen)
     		cd /home/dynatracelab_easytraveld
-		/usr/local/bin/docker-compose stop loadgen
+		$DOKER_DIR/docker-compose stop loadgen
 		;;
 	restartmongo)
     		cd /home/dynatracelab_easytraveld
-		/usr/local/bin/docker-compose stop loadgen mongodb
-		/usr/local/bin/docker-compose start mongodb loadgen 
+		$DOKER_DIR/docker-compose stop loadgen mongodb
+		$DOKER_DIR/docker-compose start mongodb loadgen 
 		;;	
 	stopmongo)
     		cd /home/dynatracelab_easytraveld
-		/usr/local/bin/docker-compose stop mongodb
+		$DOKER_DIR/docker-compose stop mongodb
 		;;
         issue)
                 cd /home/dynatracelab_easytraveld
-                /usr/local/bin/docker-compose down
-                /usr/local/bin/docker-compose -f docker-compose-issue.yml up -d
+                $DOKER_DIR/docker-compose down
+                $DOKER_DIR/docker-compose -f docker-compose-issue.yml up -d
                 ;;
 	*)
 		echo "Usage: $0 {start|stop|restart|startloadgen|stoploadgen|restartmongo|stopmongo|status}"
