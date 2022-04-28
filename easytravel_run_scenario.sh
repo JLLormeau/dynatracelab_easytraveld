@@ -15,30 +15,35 @@
 #
 ### END INIT INFO
 
-#step 1 #Large MemoryDump
+echo "#step 1 #Large MemoryDump"
 
 cd /home/dynatracelab_easytraveld
 /usr/local/bin/docker-compose down
 /usr/local/bin/docker-compose -f docker-compose-issue.yml up -d &
 
+echo "next step in 15 min"
+
 sleep 900 # 15 minutes
 
-#step 2  #Restart Easytravel
+echo "#step 2  #Restart Easytravel"
 
 cd /home/dynatracelab_easytraveld
 /usr/local/bin/docker-compose down
 /usr/local/bin/docker-compose up -d &
 
+echo "next step in 1h30"
+
 sleep 5400 #1h30
 
-#step 3 #shutdown mongodb
+echo "#step 3 #shutdown mongodb"
 cd /home/dynatracelab_easytraveld
 /usr/local/bin/docker-compose stop loadgen mongodb
 /usr/local/bin/docker-compose start mongodb loadgen &
 
+echo "next step in 15 min"
 sleep 900 #15min
 
-#step 4  #Restart Easytravel
+echo "#step 4  #Restart Easytravel"
 
 cd /home/dynatracelab_easytraveld
 /usr/local/bin/docker-compose down
