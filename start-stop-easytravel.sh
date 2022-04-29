@@ -59,8 +59,11 @@ case "$1" in
                 $DOKER_DIR/docker-compose down
                 $DOKER_DIR/docker-compose -f docker-compose-issue.yml up -d
                 ;;
+	stress)
+                docker run --rm -it progrium/stress $1
+                ;;
 	*)
-		echo "Usage: $0 {start|stop|restart|startloadgen|stoploadgen|restartmongo|stopmongo|status}"
+		echo "Usage: $0 {start|stop|restart|startloadgen|stoploadgen|restartmongo|stopmongo|status|issue|stress}"
 		exit 1
 		;;
 esac
