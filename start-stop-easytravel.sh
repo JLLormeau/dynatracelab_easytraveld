@@ -64,7 +64,7 @@ case "$1" in
 		then 
                 	docker run --rm -it progrium/stress -d 1GB --timeout 300s
 		else
-			docker run --rm -it progrium/stress 
+			docker run --rm -it progrium/stress $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12
 		fi
                 ;;
 	*)
