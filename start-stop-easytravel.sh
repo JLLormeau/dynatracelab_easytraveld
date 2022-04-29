@@ -60,7 +60,12 @@ case "$1" in
                 $DOKER_DIR/docker-compose -f docker-compose-issue.yml up -d
                 ;;
 	stress)
-                docker run --rm -it progrium/stress $1
+		if [ -z "$2" ]
+		then 
+                	docker run --rm -it progrium/stress -d 1GB --timeout 300s
+		else
+			docker run --rm -it progrium/stress 
+		fi
                 ;;
 	*)
 		echo "Usage: $0 {start|stop|restart|startloadgen|stoploadgen|restartmongo|stopmongo|status|issue|stress}"
