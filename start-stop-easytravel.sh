@@ -21,34 +21,34 @@ export DOKER_DIR=/usr/bin
 case "$1" in
 	start)
     		cd /home/dynatracelab_easytraveld
-   		$DOKER_DIR/docker-compose down
-		$DOKER_DIR/docker-compose up -d
+   		sudo $DOKER_DIR/docker-compose down
+		sudo $DOKER_DIR/docker-compose up -d
 		;;
 	stop)
     		cd /home/dynatracelab_easytraveld
-		$DOKER_DIR/docker-compose down
+		sudo $DOKER_DIR/docker-compose down
 		;;
 	restart)
     		cd /home/dynatracelab_easytraveld
-		$DOKER_DIR/docker-compose down
-		$DOKER_DIR/docker-compose up -d
+		sudo $DOKER_DIR/docker-compose down
+		sudo $DOKER_DIR/docker-compose up -d
 		;;
 	status)
     		cd /home/dynatracelab_easytraveld
-		$DOKER_DIR/docker-compose ps
+		sudo $DOKER_DIR/docker-compose ps
 		;;
 	startloadgen)
     		cd /home/dynatracelab_easytraveld
-		$DOKER_DIR/docker-compose start loadgen 
+		sudo $DOKER_DIR/docker-compose start loadgen 
 		;;
 	stoploadgen)
     		cd /home/dynatracelab_easytraveld
-		$DOKER_DIR/docker-compose stop loadgen
+		sudo $DOKER_DIR/docker-compose stop loadgen
 		;;
 	restartmongo)
     		cd /home/dynatracelab_easytraveld
-		$DOKER_DIR/docker-compose stop loadgen mongodb
-		$DOKER_DIR/docker-compose start mongodb loadgen 
+		sudo $DOKER_DIR/docker-compose stop loadgen mongodb
+		sudo $DOKER_DIR/docker-compose start mongodb loadgen 
 		;;	
 	stopmongo)
     		cd /home/dynatracelab_easytraveld
@@ -56,8 +56,8 @@ case "$1" in
 		;;
         issue)
                 cd /home/dynatracelab_easytraveld
-                $DOKER_DIR/docker-compose down
-                $DOKER_DIR/docker-compose -f docker-compose-issue.yml up -d
+                sudo $DOKER_DIR/docker-compose down
+                sudo $DOKER_DIR/docker-compose -f docker-compose-issue.yml up -d
                 ;;
 	stress)
 		if [ -z "$2" ]
