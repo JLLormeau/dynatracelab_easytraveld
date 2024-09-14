@@ -71,12 +71,11 @@ loadgen:
   - frontend
   - www
   environment:
-    ET_APM_SERVER_DEFAULT: "APM"
     ET_FRONTEND_URL: "http://easytravel-www:80"
     ET_BACKEND_URL: "http://easytravel-www:8080"
     #ET_PROBLEMS: "BadCacheSynchronization,CPULoad,DatabaseCleanup,DatabaseSlowdown,FetchSizeTooSmall,JourneySearchError404,JourneySearchError500,LoginProblems,MobileErrors,TravellersOptionBox"
     ET_PROBLEMS: "CPULoadExternalProcess,CPULoadJourneyService,BadCacheSynchronization,CPULoad,JourneySearchError404,SlowAuthentication,SlowImages,SlowUserLogin,WorldMapDNSFailsAsia,JourneySearchError500,DatabaseSlowdown,SlowIoDummyPaymentService,FetchSizeTooSmall,InfiniteLoopInFrontend,DeadlockInFrontend,SmallMemoryLeak,JourneyUpdateSlow,TravellersOptionBox,LoginProblems"
-    ET_PROBLEMS_DELAY: 20
+    #ET_PROBLEMS_DELAY: 20
     ET_VISIT_NUMBER: 12
 
 
@@ -88,5 +87,7 @@ headless-loadgen:
   - angular-frontend
   - www
   environment:
-    ET_APM_SERVER_DEFAULT: "APM"
     ET_ANGULAR_FRONTEND_URL: "http://easytravel-www:9079"
+    ET_VISIT_NUMBER: 2
+    MAX_CHROME_DRIVERS: 4
+    SCENARIO_NAME: "Headless Angular Scenario"
