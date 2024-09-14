@@ -90,4 +90,5 @@ headless-loadgen:
     ET_ANGULAR_FRONTEND_URL: "http://easytravel-www:9079"
     ET_VISIT_NUMBER: 2
     MAX_CHROME_DRIVERS: 4
-    SCENARIO_NAME: "Headless Angular Scenario"
+    #SCENARIO_NAME: "Headless Angular Scenario"
+    ET_PROBLEMS_DELAY: 7500
