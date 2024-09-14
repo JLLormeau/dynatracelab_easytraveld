@@ -76,7 +76,8 @@ loadgen:
     #ET_PROBLEMS: "BadCacheSynchronization,CPULoad,DatabaseCleanup,DatabaseSlowdown,FetchSizeTooSmall,JourneySearchError404,JourneySearchError500,LoginProblems,MobileErrors,TravellersOptionBox"
     ET_PROBLEMS: "CPULoadExternalProcess,CPULoadJourneyService,BadCacheSynchronization,CPULoad,JourneySearchError404,SlowAuthentication,SlowImages,SlowUserLogin,WorldMapDNSFailsAsia,JourneySearchError500,DatabaseSlowdown,SlowIoDummyPaymentService,FetchSizeTooSmall,InfiniteLoopInFrontend,DeadlockInFrontend,SmallMemoryLeak,JourneyUpdateSlow,TravellersOptionBox,LoginProblems"
     #ET_PROBLEMS_DELAY: 20
-    ET_VISIT_NUMBER: 12
+    ET_VISIT_NUMBER: 6
+    ET_PROBLEMS_DELAY: 7500
 
 
 headless-loadgen:
@@ -88,7 +89,7 @@ headless-loadgen:
   - www
   environment:
     ET_ANGULAR_FRONTEND_URL: "http://easytravel-www:9079"
-    ET_VISIT_NUMBER: 2
+    ET_VISIT_NUMBER: 6
     MAX_CHROME_DRIVERS: 4
     #SCENARIO_NAME: "Headless Angular Scenario"
     ET_PROBLEMS_DELAY: 7500
